@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
     
     private Rigidbody rb;
 
+    public Transform headTransform;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -18,26 +20,34 @@ public class Player : MonoBehaviour
 
     public void PlayerMovement()
     {
+        Vector3 forward = headTransform.forward;
+        forward.y = 0f;
+        forward.Normalize();
+
+        Vector3 right = headTransform.right;
+        right.y = 0f;
+        right.Normalize();
 
         if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(Vector3.forward * speed);
+            rb.AddForce(forward * speed);
         }
-    
+
         if (Input.GetKey(KeyCode.S))
         {
-            rb.AddForce(Vector3.back * speed);
+            rb.AddForce(-forward * speed);
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            rb.AddForce(Vector3.left * speed);
+            rb.AddForce(-right * speed);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            rb.AddForce(Vector3.right * speed);
+            rb.AddForce(right * speed);
         }
+
     }
 
    
