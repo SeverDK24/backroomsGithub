@@ -11,13 +11,19 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    public void PlayerMoving()
+    public void Update()
     {
+        PlayerMovement();
+    }
+
+    public void PlayerMovement()
+    {
+
         if (Input.GetKey(KeyCode.W))
         {
             rb.AddForce(Vector3.forward * speed);
         }
-
+    
         if (Input.GetKey(KeyCode.S))
         {
             rb.AddForce(Vector3.back * speed);
