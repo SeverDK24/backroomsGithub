@@ -3,7 +3,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private float speed = 10f;
-    
+    public float sprintspeed = 20;
+
+
     private Rigidbody rb;
 
     public Transform headTransform;
@@ -16,6 +18,7 @@ public class Player : MonoBehaviour
     public void Update()
     {
         PlayerMovement();
+        Sprint();
     }
 
     public void PlayerMovement()
@@ -48,6 +51,18 @@ public class Player : MonoBehaviour
             rb.AddForce(right * speed);
         }
 
+    }
+
+    public void Sprint()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = sprintspeed;
+        }
+        else
+        {
+            speed = 10f;
+        }
     }
 
    
