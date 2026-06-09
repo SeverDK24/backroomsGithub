@@ -4,7 +4,9 @@ public class Player : MonoBehaviour
 {
     private float speed = 10f;
     public float sprintspeed = 20;
+    public float jumpForce = 5f;
 
+    private bool isGrounded = true;
 
     private Rigidbody rb;
 
@@ -19,6 +21,7 @@ public class Player : MonoBehaviour
     {
         PlayerMovement();
         Sprint();
+        Jump();
     }
 
     public void PlayerMovement()
@@ -51,6 +54,7 @@ public class Player : MonoBehaviour
             rb.AddForce(right * speed);
         }
 
+
     }
 
     public void Sprint()
@@ -65,5 +69,20 @@ public class Player : MonoBehaviour
         }
     }
 
-   
+    public void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+    }
+
 }
