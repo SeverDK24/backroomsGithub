@@ -18,6 +18,7 @@ public class EnemyBehave : MonoBehaviour
             if (hit.gameObject.tag == "player")
             {
                 Debug.Log("player spotted");
+                transform.LookAt(hit.transform.position);   
             }
         }
 
