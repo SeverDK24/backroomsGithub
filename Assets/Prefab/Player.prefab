@@ -129,6 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea3ce4cf80eb7143bb8d42db0efc349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  sprintspeed: 20
+  jumpForce: 5
   headTransform: {fileID: 1380382966272140227}
 --- !u!54 &7544960913458600157
 Rigidbody:

@@ -6,6 +6,9 @@ public class Player : MonoBehaviour
     public float sprintspeed = 20;
     public float jumpForce = 5f;
 
+    private float maxStamina = 2f;
+    private float stamina;
+
     private bool isGrounded = true;
 
     private Rigidbody rb;
@@ -15,13 +18,16 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        stamina = maxStamina;
     }
 
     public void Update()
     {
+        Debug.Log("Speed: " + speed);
+        Debug.Log("Stamina: " + stamina);
         PlayerMovement();
-        Sprint();
         Jump();
+        Sprint();
     }
 
     public void PlayerMovement()
@@ -59,14 +65,25 @@ public class Player : MonoBehaviour
 
     public void Sprint()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && stamina > 0)
         {
             speed = sprintspeed;
+            stamina -= Time.deltaTime; // витрачаємо витривалість
         }
         else
         {
             speed = 10f;
+            
         }
+        if (stamina <= 0)
+        {
+            speed = 10f;
+        }
+        if (!Input.GetKey(KeyCode.LeftShift) && stamina < maxStamina)
+        {
+            stamina += Time.deltaTime;
+        }
+        stamina = Mathf.Clamp(stamina, 0, maxStamina);
     }
 
     public void Jump()
@@ -76,6 +93,7 @@ public class Player : MonoBehaviour
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
+
     }
     private void OnCollisionEnter(Collision collision)
     {
