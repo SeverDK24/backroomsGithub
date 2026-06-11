@@ -391,9 +391,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 948808926851888600, guid: bc0ba07f386428647930cae4394a1a73, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 2117106652930254145, guid: bc0ba07f386428647930cae4394a1a73, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 5335372236149636836, guid: bc0ba07f386428647930cae4394a1a73, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 5624573852609872633, guid: bc0ba07f386428647930cae4394a1a73, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8535483711988455219, guid: bc0ba07f386428647930cae4394a1a73, type: 3}
       propertyPath: m_Name
       value: backrooms
+      objectReference: {fileID: 0}
+    - target: {fileID: 8535483711988455219, guid: bc0ba07f386428647930cae4394a1a73, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 9025197822361996681, guid: bc0ba07f386428647930cae4394a1a73, type: 3}
       propertyPath: m_LocalPosition.x
