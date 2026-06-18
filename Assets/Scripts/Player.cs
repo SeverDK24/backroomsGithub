@@ -87,9 +87,10 @@ public class Player : MonoBehaviour
 
     public void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && stamina >= 0.5f)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            stamina -= 0.5f;
             isGrounded = false;
         }
 
