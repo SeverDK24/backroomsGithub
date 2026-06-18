@@ -6,8 +6,8 @@ public class Player : MonoBehaviour
     public float sprintspeed = 20;
     public float jumpForce = 5f;
 
-    private float maxStamina = 2f;
-    private float stamina;
+    public float maxStamina = 2f;
+    public float stamina;
 
     private bool isGrounded = true;
 
@@ -72,8 +72,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            speed = 10f;
-            
+            speed = 10f;         
         }
         if (stamina <= 0)
         {
