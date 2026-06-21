@@ -21,6 +21,6 @@ public class EnemyMeshAgent : EnemyBehave
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.ga)
+      //  if (collision.ga) я його закомітила бо воно видавало помилку і не давало мені запустити гру :)
     }
 }
