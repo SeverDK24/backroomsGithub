@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private float speed = 10f;
-    public float sprintspeed = 20;
+    private float speed = 5f;
+    public float sprintspeed = 13;
     public float jumpForce = 5f;
 
     public float maxStamina = 2f;
@@ -23,11 +23,10 @@ public class Player : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log("Speed: " + speed);
-        Debug.Log("Stamina: " + stamina);
+        
+        Sprint();
         PlayerMovement();
         Jump();
-        Sprint();
     }
 
     public void PlayerMovement()
@@ -42,22 +41,22 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(forward * speed);
+           rb.linearVelocity = forward * speed;
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            rb.AddForce(-forward * speed);
+            rb.linearVelocity = -forward * speed;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            rb.AddForce(-right * speed);
+            rb.linearVelocity = -right * speed;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            rb.AddForce(right * speed);
+            rb.linearVelocity = right * speed;
         }
 
 
@@ -72,15 +71,15 @@ public class Player : MonoBehaviour
         }
         else
         {
-            speed = 10f;         
+            speed = 5f;         
         }
         if (stamina <= 0)
         {
-            speed = 10f;
+            speed = 5f;
         }
         if (!Input.GetKey(KeyCode.LeftShift) && stamina < maxStamina)
         {
-            stamina += Time.deltaTime;
+            stamina += Time.deltaTime * 0.25f;// * 0.25 заповільнює зявляння витривалості (щоб пришвидшити треба збільшити)
         }
         stamina = Mathf.Clamp(stamina, 0, maxStamina);
     }
