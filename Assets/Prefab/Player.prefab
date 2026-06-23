@@ -421,6 +421,7 @@ GameObject:
   - component: {fileID: 8500948617294087784}
   - component: {fileID: 3459318258011728246}
   - component: {fileID: 2123064692097715188}
+  - component: {fileID: 6170785535660506134}
   - component: {fileID: 7544960913458600157}
   - component: {fileID: 8862039065687924711}
   m_Layer: 0
@@ -539,7 +540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea3ce4cf80eb7143bb8d42db0efc349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  sprintspeed: 20
+  sprintspeed: 13
   jumpForce: 5
   maxStamina: 2
   stamina: 0
@@ -576,6 +577,18 @@ MonoBehaviour:
   CubSize: {x: 1.3, y: 2.3, z: 1.3}
   CubPosition: {x: 0, y: 0, z: 0}
   timer: 1
+--- !u!114 &6170785535660506134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7181828697669541453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03d411e16118694f929bc1d8d64cd7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pouse
 --- !u!54 &7544960913458600157
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -616,7 +629,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 3a66953e14c5e7d4e8e89f95adaeb9f8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.14
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
