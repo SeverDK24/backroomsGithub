@@ -1,0 +1,28 @@
+using UnityEngine;
+
+public class pointoverlap : MonoBehaviour
+{
+    private float rad = 0.5f;
+    public bool isSpot = false;
+    public EnemyMeshAgent em;
+    void Start()
+    {
+        
+    }
+
+  
+    void Update()
+    {
+        Collider[] hits = Physics.OverlapSphere(transform.position, rad);
+        foreach (Collider hit in hits)
+        {
+            if (hit.gameObject.tag == "player")
+            {
+                isSpot = true;  
+               
+
+            }
+            
+        }
+    }
+}
