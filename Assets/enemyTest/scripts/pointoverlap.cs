@@ -3,6 +3,8 @@ using UnityEngine;
 public class pointoverlap : MonoBehaviour
 {
     private float rad = 0.5f;
+    public bool isSpot = false;
+    public EnemyMeshAgent em;
     void Start()
     {
         
@@ -16,14 +18,11 @@ public class pointoverlap : MonoBehaviour
         {
             if (hit.gameObject.tag == "player")
             {
-                Debug.Log("player spotted");
-                ma.SetPosition();
+                isSpot = true;  
+               
 
             }
-            //if (hits == null)
-            //{
-            //    anim.SetTrigger("islost");
-            //}
+            
         }
     }
 }
