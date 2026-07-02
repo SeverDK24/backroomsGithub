@@ -1,13 +1,15 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyMeshAgent : EnemyBehave
+public class EnemyMeshAgent : MonoBehaviour
 {
     private NavMeshAgent agent;
     //public Transform pos; 
     private bool isTouched = false;
     public Transform[] points;
-    private int whatpoint;  
+    private int whatpoint;
+    public pointoverlap po;
+    public EnemyBehave pp;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -19,6 +21,7 @@ public class EnemyMeshAgent : EnemyBehave
    
     void Update()
     {
+        OnReachPoint();
        // agent.SetDestination(pos.position); 
        if (isTouched)
         {
@@ -27,21 +30,36 @@ public class EnemyMeshAgent : EnemyBehave
     }
     public void SetPosition()
     {
-        agent.SetDestination(playerpos.position);       
+        agent.SetDestination(pp.playerpos.position);
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnReachPoint()
     {
-      if (collision.gameObject.tag == "point")
+        if (po.isSpot)
         {
-            
-                isTouched = true;
-                whatpoint = Random.Range(0, 6);
-                Debug.Log(whatpoint);
-                transform.LookAt(points[whatpoint].position);
-                agent.SetDestination(points[whatpoint].position);
-            
-            
+            po.isSpot = false;
 
+            isTouched = true;
+            whatpoint = Random.Range(0, 6);
+            Debug.Log(whatpoint);
+            transform.LookAt(points[whatpoint].position);
+            agent.SetDestination(points[whatpoint].position);
         }
+
     }
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //  if (collision.gameObject.tag == "point")
+    //    {
+
+    //            isTouched = true;
+    //            whatpoint = Random.Range(0, 6);
+    //            Debug.Log(whatpoint);
+    //            transform.LookAt(points[whatpoint].position);
+    //            agent.SetDestination(points[whatpoint].position);
+
+
+
+    //    }
+    //}
 }
