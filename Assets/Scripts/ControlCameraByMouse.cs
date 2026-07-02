@@ -6,6 +6,8 @@ public class ControlCameraByMouse : MonoBehaviour
     public Transform headTransform;
     public float rotationSpeed = 150f;
 
+    public bool canLook = true;
+
     private float verticalAngle = 0f;
     private float horizontalAngle = 0f;
 
@@ -17,6 +19,9 @@ public class ControlCameraByMouse : MonoBehaviour
 
     public void Update()
     {
+        if (!canLook)
+            return;
+
         float mouseX = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
 

@@ -343,6 +343,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6170785535660506134, guid: 6cd2652d0e03eac4d9f956d904f1f582, type: 3}
+      propertyPath: controlCameraByMouse
+      value: 
+      objectReference: {fileID: 2004895969}
     - target: {fileID: 7181828697669541453, guid: 6cd2652d0e03eac4d9f956d904f1f582, type: 3}
       propertyPath: m_Name
       value: Player
@@ -465,6 +469,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2004895969 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1217757302826816802, guid: 6cd2652d0e03eac4d9f956d904f1f582, type: 3}
+  m_PrefabInstance: {fileID: 1067283358}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7821cb7405e4d3c45b6c39c14b5d7dff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControlCameraByMouse
 --- !u!1 &2027533182
 GameObject:
   m_ObjectHideFlags: 0
