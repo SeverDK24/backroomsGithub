@@ -5,11 +5,13 @@ public class EnemyMeshAgent : MonoBehaviour
 {
     private NavMeshAgent agent;
     //public Transform pos; 
-    private bool isTouched = false;
+    
     public Transform[] points;
     private int whatpoint;
     public pointoverlap po;
     public EnemyBehave pp;
+    private float time = 3;
+    private float timer;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -22,11 +24,9 @@ public class EnemyMeshAgent : MonoBehaviour
     void Update()
     {
         OnReachPoint();
-       // agent.SetDestination(pos.position); 
-       if (isTouched)
-        {
-
-        }
+        // agent.SetDestination(pos.position); 
+      
+       
     }
     public void SetPosition()
     {
@@ -36,10 +36,19 @@ public class EnemyMeshAgent : MonoBehaviour
     {
         if (po.isSpot)
         {
-            po.isSpot = false;
+            Debug.Log(po.isSpot);       
+            timer = Time.deltaTime;
+            if (time <= timer)
+            {
+                po.isSpot = false;
+                whatpoint = Random.Range(0, 6);
+                time = 3;
 
-            isTouched = true;
-            whatpoint = Random.Range(0, 6);
+            }
+
+
+
+           
             Debug.Log(whatpoint);
             transform.LookAt(points[whatpoint].position);
             agent.SetDestination(points[whatpoint].position);
@@ -47,19 +56,5 @@ public class EnemyMeshAgent : MonoBehaviour
 
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //  if (collision.gameObject.tag == "point")
-    //    {
-
-    //            isTouched = true;
-    //            whatpoint = Random.Range(0, 6);
-    //            Debug.Log(whatpoint);
-    //            transform.LookAt(points[whatpoint].position);
-    //            agent.SetDestination(points[whatpoint].position);
-
-
-
-    //    }
-    //}
+    
 }

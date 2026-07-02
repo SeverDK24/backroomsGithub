@@ -16,7 +16,7 @@ public class pointoverlap : MonoBehaviour
         Collider[] hits = Physics.OverlapSphere(transform.position, rad);
         foreach (Collider hit in hits)
         {
-            if (hit.gameObject.tag == "player")
+            if (hit.gameObject.tag == "monster")
             {
                 isSpot = true;  
                
