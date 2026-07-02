@@ -1,13 +1,17 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyMeshAgent : EnemyBehave
+public class EnemyMeshAgent : MonoBehaviour
 {
     private NavMeshAgent agent;
     //public Transform pos; 
-    private bool isTouched = false;
+    
     public Transform[] points;
-    private int whatpoint;  
+    private int whatpoint;
+    public pointoverlap po;
+    public EnemyBehave pp;
+    private float time = 3;
+    private float timer;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -19,29 +23,38 @@ public class EnemyMeshAgent : EnemyBehave
    
     void Update()
     {
-       // agent.SetDestination(pos.position); 
-       if (isTouched)
-        {
-
-        }
+        OnReachPoint();
+        // agent.SetDestination(pos.position); 
+      
+       
     }
     public void SetPosition()
     {
-        agent.SetDestination(playerpos.position);       
+        agent.SetDestination(pp.playerpos.position);
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnReachPoint()
     {
-      if (collision.gameObject.tag == "point")
+        if (po.isSpot)
         {
-            
-                isTouched = true;
+            Debug.Log(po.isSpot);       
+            timer = Time.deltaTime;
+            if (time <= timer)
+            {
+                po.isSpot = false;
                 whatpoint = Random.Range(0, 6);
-                Debug.Log(whatpoint);
-                transform.LookAt(points[whatpoint].position);
-                agent.SetDestination(points[whatpoint].position);
-            
-            
+                time = 3;
 
+            }
+
+
+
+           
+            Debug.Log(whatpoint);
+            transform.LookAt(points[whatpoint].position);
+            agent.SetDestination(points[whatpoint].position);
         }
+
     }
+
+    
 }

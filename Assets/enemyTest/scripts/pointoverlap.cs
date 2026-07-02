@@ -4,7 +4,7 @@ public class pointoverlap : MonoBehaviour
 {
     private float rad = 0.5f;
     public bool isSpot = false;
-    public EnemyMeshAgent em;
+    //public EnemyMeshAgent em;
     void Start()
     {
         
@@ -16,7 +16,7 @@ public class pointoverlap : MonoBehaviour
         Collider[] hits = Physics.OverlapSphere(transform.position, rad);
         foreach (Collider hit in hits)
         {
-            if (hit.gameObject.tag == "player")
+            if (hit.gameObject.tag == "monster")
             {
                 isSpot = true;  
                
@@ -24,5 +24,10 @@ public class pointoverlap : MonoBehaviour
             }
             
         }
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, rad);
     }
 }
