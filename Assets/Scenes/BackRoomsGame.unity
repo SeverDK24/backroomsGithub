@@ -608,6 +608,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 17f2074047464954a91c2776983b81e5, type: 2}
+    - target: {fileID: 1380271417287624742, guid: bc0ba07f386428647930cae4394a1a73, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 219.71869
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380271417287624742, guid: bc0ba07f386428647930cae4394a1a73, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.157
+      objectReference: {fileID: 0}
     - target: {fileID: 1401928365401347588, guid: bc0ba07f386428647930cae4394a1a73, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -658,11 +666,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: cdab927a2b276f44b87fae31a41b99f3, type: 2}
     - target: {fileID: 1937482549974853780, guid: bc0ba07f386428647930cae4394a1a73, type: 3}
       propertyPath: m_LocalScale.y
-      value: 180.62
+      value: 199.94633
       objectReference: {fileID: 0}
     - target: {fileID: 1937482549974853780, guid: bc0ba07f386428647930cae4394a1a73, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9911
+      value: 1.7978
       objectReference: {fileID: 0}
     - target: {fileID: 1958042253805119514, guid: bc0ba07f386428647930cae4394a1a73, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -1080,6 +1088,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: cdab927a2b276f44b87fae31a41b99f3, type: 2}
+    - target: {fileID: 8512718636267487778, guid: bc0ba07f386428647930cae4394a1a73, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 180.67563
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512718636267487778, guid: bc0ba07f386428647930cae4394a1a73, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.0397
+      objectReference: {fileID: 0}
     - target: {fileID: 8535483711988455219, guid: bc0ba07f386428647930cae4394a1a73, type: 3}
       propertyPath: m_Name
       value: backrooms
