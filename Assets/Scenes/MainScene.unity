@@ -401,6 +401,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7bf744dfc92d8498156d10bd2b5ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Butons
+  image: {fileID: 0}
+  buton: {fileID: 0}
+  musicslider: {fileID: 0}
 --- !u!1 &217482918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,7 +1553,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 82c18ddc9c5339946a0d50498f66cb53, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4116,7 +4119,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 82c18ddc9c5339946a0d50498f66cb53, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
