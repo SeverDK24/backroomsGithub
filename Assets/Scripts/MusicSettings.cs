@@ -16,10 +16,9 @@ public class MusicSettings : MonoBehaviour
     }
 
     public void ChangeVolume(float value)
-    {
-        Debug.Log(value);
-       
+    {             
         music.volume = value;
+
     }
 
 

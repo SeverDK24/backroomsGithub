@@ -6,8 +6,10 @@ public class Butons : MonoBehaviour
 {
     public GameObject image;
     public GameObject buton;
+    public GameObject textSound;
     public Slider musicslider;
 
+    public bool areSettingsOpen = false; // днаюбкемн ≈ НАШВМЮЪ ОЕПЕЛЕММЮЪ
     void Start()
     {
 
@@ -42,6 +44,10 @@ public class Butons : MonoBehaviour
         musicslider.gameObject.SetActive(true);
         image.SetActive(true);
         buton.SetActive(true);
+        textSound.SetActive(true);  
+
+
+        areSettingsOpen = true; // днаюбкемн
     }
 
     public void CloseSetting()
@@ -49,5 +55,8 @@ public class Butons : MonoBehaviour
         musicslider.gameObject.SetActive(false);
         image.SetActive(false);
         buton.SetActive(false);
+        textSound.SetActive(false);
+
+        areSettingsOpen = false; // днаюбкемн
     }
 }

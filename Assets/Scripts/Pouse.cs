@@ -12,6 +12,9 @@ public class Pouse : MonoBehaviour
     public GameObject butonsetting;
     public GameObject butonexittomenue;
 
+    public Butons butons;
+
+
     void Start()
     {
 
@@ -23,14 +26,16 @@ public class Pouse : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
+            {
+                if (butons != null && butons.areSettingsOpen) // ДОБАВЛЕНО
+                {
+                    Debug.Log("Нельзя снять паузу, пока открыты настройки");
+                    return;
+                }
                 ResumeGame();
-            
+            }
             else
                 PauseGameFunc();
-
-
-            
-
         }
     }
 
@@ -50,6 +55,7 @@ public class Pouse : MonoBehaviour
         textpoused.SetActive(true);
         butonexittomenue.SetActive(true);
         Debug.Log("Пауза!");
+
     }
     void ResumeGame()
     {
@@ -65,6 +71,7 @@ public class Pouse : MonoBehaviour
         butonsetting.SetActive(false);
         textpoused.SetActive(false);
         butonexittomenue.SetActive(false);
-        Debug.Log("Нема паузи");
+        Debug.Log("Нема паузи");       
     }
+
 }
