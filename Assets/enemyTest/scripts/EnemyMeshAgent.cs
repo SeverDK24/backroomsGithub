@@ -8,14 +8,14 @@ public class EnemyMeshAgent : MonoBehaviour
     
     public Transform[] points;
     private int whatpoint;
-    public pointoverlap po;
+    //public pointoverlap po;
     public EnemyBehave pp;
     private float time = 3;
     private float timer;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        whatpoint = Random.Range(0, 6);
+        whatpoint = Random.Range(0, 7);
         transform.LookAt(points[whatpoint].position);
         agent.SetDestination(points[whatpoint].position);
     }
@@ -23,10 +23,31 @@ public class EnemyMeshAgent : MonoBehaviour
    
     void Update()
     {
-        OnReachPoint();
+        //Debug.Log(po.isSpot);
+        //OnReachPoint();
         // agent.SetDestination(pos.position); 
-      
-       
+        //if (po.isSpot)
+        //{
+        //    Debug.Log(po.isSpot);
+        //    timer = Time.deltaTime;
+        //    if (time <= timer)
+        //    {
+        //        po.isSpot = false;
+        //        whatpoint = Random.Range(0, 6);
+        //        time = 3;
+
+        //    }
+
+
+
+
+        //    Debug.Log(whatpoint);
+        //    transform.LookAt(points[whatpoint].position);
+        //    agent.SetDestination(points[whatpoint].position);
+        //}
+
+
+
     }
     public void SetPosition()
     {
@@ -34,26 +55,7 @@ public class EnemyMeshAgent : MonoBehaviour
     }
     private void OnReachPoint()
     {
-        if (po.isSpot)
-        {
-            Debug.Log(po.isSpot);       
-            timer = Time.deltaTime;
-            if (time <= timer)
-            {
-                po.isSpot = false;
-                whatpoint = Random.Range(0, 6);
-                time = 3;
-
-            }
-
-
-
-           
-            Debug.Log(whatpoint);
-            transform.LookAt(points[whatpoint].position);
-            agent.SetDestination(points[whatpoint].position);
-        }
-
+       
     }
 
     

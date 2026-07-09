@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class pointoverlap : MonoBehaviour
 {
-    private float rad = 0.5f;
+    private float rad = 2f;
     public bool isSpot = false;
     //public EnemyMeshAgent em;
     void Start()

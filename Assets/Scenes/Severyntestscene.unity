@@ -128,8 +128,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 30370010}
-  - component: {fileID: 30370011}
   - component: {fileID: 30370009}
+  - component: {fileID: 30370011}
   - component: {fileID: 30370008}
   - component: {fileID: 30370007}
   m_Layer: 0
@@ -226,7 +226,7 @@ Transform:
   m_GameObject: {fileID: 30370006}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.1, y: 0.15957, z: -11.96}
+  m_LocalPosition: {x: 10.1, y: 1.77, z: -11.96}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -241,10 +241,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 30370006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcfc12fd1ca40814f91f0e2b462f43cc, type: 3}
+  m_Script: {fileID: 11500000, guid: f190ef76593babd42b2a624cd855bcf6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::pointoverlap
-  isSpot: 0
+  m_EditorClassIdentifier: Assembly-CSharp::PatrolPoint
+  radius: 1.5
 --- !u!1 &56051101
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,8 +399,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 249455297}
-  - component: {fileID: 249455298}
   - component: {fileID: 249455296}
+  - component: {fileID: 249455298}
   - component: {fileID: 249455295}
   - component: {fileID: 249455294}
   m_Layer: 0
@@ -497,7 +497,7 @@ Transform:
   m_GameObject: {fileID: 249455293}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.19, y: 0.266, z: -5.71}
+  m_LocalPosition: {x: 8.19, y: 1.87643, z: -5.71}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -512,10 +512,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 249455293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcfc12fd1ca40814f91f0e2b462f43cc, type: 3}
+  m_Script: {fileID: 11500000, guid: f190ef76593babd42b2a624cd855bcf6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::pointoverlap
-  isSpot: 0
+  m_EditorClassIdentifier: Assembly-CSharp::PatrolPoint
+  radius: 1.5
 --- !u!1 &362935145
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,8 +652,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 532636732}
-  - component: {fileID: 532636733}
   - component: {fileID: 532636731}
+  - component: {fileID: 532636733}
   - component: {fileID: 532636730}
   - component: {fileID: 532636729}
   m_Layer: 0
@@ -750,7 +750,7 @@ Transform:
   m_GameObject: {fileID: 532636728}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6000004, y: 0.15957, z: -11.96}
+  m_LocalPosition: {x: 2.6000004, y: 1.77, z: -11.96}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -765,53 +765,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 532636728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcfc12fd1ca40814f91f0e2b462f43cc, type: 3}
+  m_Script: {fileID: 11500000, guid: f190ef76593babd42b2a624cd855bcf6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::pointoverlap
-  isSpot: 0
+  m_EditorClassIdentifier: Assembly-CSharp::PatrolPoint
+  radius: 1.5
 --- !u!1 &882305421 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2168068442106150883, guid: 4ba5cbea767d9b54eb7a655b769517da, type: 3}
   m_PrefabInstance: {fileID: 1876687575}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &882305423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882305421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0be570e06a4af0143be324f2c9cf7824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyBehave
-  rad: 2.5
-  playerpos: {fileID: 1017233503}
-  anim: {fileID: 0}
-  ma: {fileID: 882305424}
---- !u!114 &882305424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882305421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e5d07be7bf94e94b90abd54216e1a38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyMeshAgent
-  points:
-  - {fileID: 30370010}
-  - {fileID: 532636732}
-  - {fileID: 249455297}
-  - {fileID: 1956519040}
-  - {fileID: 937767276}
-  - {fileID: 30370010}
-  - {fileID: 249455297}
-  po: {fileID: 30370011}
-  pp: {fileID: 882305423}
 --- !u!54 &882305425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -904,6 +866,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &882305430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882305421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59e274cf52a35b84db485ab70812d471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PatrolAI
+  patrolPoints:
+  - {fileID: 30370011}
+  - {fileID: 532636733}
+  - {fileID: 249455298}
+  - {fileID: 1956519041}
+  - {fileID: 937767277}
 --- !u!1 &937767272
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,8 +893,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 937767276}
-  - component: {fileID: 937767277}
   - component: {fileID: 937767275}
+  - component: {fileID: 937767277}
   - component: {fileID: 937767274}
   - component: {fileID: 937767273}
   m_Layer: 0
@@ -1011,7 +991,7 @@ Transform:
   m_GameObject: {fileID: 937767272}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.9, y: 0.15957, z: -13.71}
+  m_LocalPosition: {x: -8.9, y: 1.77, z: -13.71}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1026,10 +1006,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 937767272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcfc12fd1ca40814f91f0e2b462f43cc, type: 3}
+  m_Script: {fileID: 11500000, guid: f190ef76593babd42b2a624cd855bcf6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::pointoverlap
-  isSpot: 0
+  m_EditorClassIdentifier: Assembly-CSharp::PatrolPoint
+  radius: 1.5
 --- !u!1 &1017233499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,6 +1307,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1797532892775361826, guid: 4ba5cbea767d9b54eb7a655b769517da, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 744aef33ded138544b1a0c348169eccc, type: 2}
     - target: {fileID: 2168068442106150883, guid: 4ba5cbea767d9b54eb7a655b769517da, type: 3}
       propertyPath: m_Name
       value: monster_scavenger_Skin_Red
@@ -1339,16 +1323,17 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6792837370631607624, guid: 4ba5cbea767d9b54eb7a655b769517da, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 82c18ddc9c5339946a0d50498f66cb53, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2168068442106150883, guid: 4ba5cbea767d9b54eb7a655b769517da, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 882305424}
-    - targetCorrespondingSourceObject: {fileID: 2168068442106150883, guid: 4ba5cbea767d9b54eb7a655b769517da, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 882305423}
+      addedObject: {fileID: 882305430}
     - targetCorrespondingSourceObject: {fileID: 2168068442106150883, guid: 4ba5cbea767d9b54eb7a655b769517da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 882305427}
@@ -1371,8 +1356,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1956519040}
-  - component: {fileID: 1956519041}
   - component: {fileID: 1956519039}
+  - component: {fileID: 1956519041}
   - component: {fileID: 1956519038}
   - component: {fileID: 1956519037}
   m_Layer: 0
@@ -1469,7 +1454,7 @@ Transform:
   m_GameObject: {fileID: 1956519036}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.9, y: 0.15957, z: -5.71}
+  m_LocalPosition: {x: -4.9, y: 1.77, z: -5.71}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1484,10 +1469,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1956519036}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcfc12fd1ca40814f91f0e2b462f43cc, type: 3}
+  m_Script: {fileID: 11500000, guid: f190ef76593babd42b2a624cd855bcf6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::pointoverlap
-  isSpot: 0
+  m_EditorClassIdentifier: Assembly-CSharp::PatrolPoint
+  radius: 1.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
