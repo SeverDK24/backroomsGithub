@@ -884,6 +884,10 @@ MonoBehaviour:
   - {fileID: 249455298}
   - {fileID: 1956519041}
   - {fileID: 937767277}
+  playerpos: {fileID: 1017233503}
+  viewDistance: 10
+  viewAngle: 60
+  player: {fileID: 1017233503}
 --- !u!1 &937767272
 GameObject:
   m_ObjectHideFlags: 0
