@@ -11,7 +11,7 @@ public class PlayerHearts : MonoBehaviour
     public Vector3 CubPosition;
 
     public float timer = 2;
-    int lives = 3;                // серця
+    public int lives = 3;                // серця
     float cooldown = 0f;          // таймер паузи
     void Start()
     {
@@ -34,11 +34,11 @@ public class PlayerHearts : MonoBehaviour
 
         foreach (Collider hit in hits)
         {
-            if (hit.CompareTag("Enemy") && cooldown <= 0)
+            if (hit.CompareTag("monster") && cooldown <= 0)
             {
                 LoseHearts();
                 cooldown = 2f; // пауза 2 секунди
-                break;
+               
             }
         }
     }

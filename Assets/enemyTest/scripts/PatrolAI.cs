@@ -13,7 +13,7 @@ public class PatrolAI : MonoBehaviour
     public Transform player;
     private float rad = 3f;
     public float detectionRadius = 10f;
-
+    public PlayerHearts plh;
     private bool chasingPlayer = false;
     
    
@@ -104,6 +104,16 @@ public class PatrolAI : MonoBehaviour
 
             GoToRandomPoint();
         }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if ((collision.gameObject.tag=="player"))
+        {
+            plh.EnemyDamage();
+            Debug.Log(plh.lives);       
+
+        }
+
     }
 
 
