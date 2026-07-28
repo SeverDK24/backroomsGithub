@@ -8,6 +8,7 @@ TagManager:
   - player
   - point
   - monster
+  - test
   layers:
   - Default
   - TransparentFX

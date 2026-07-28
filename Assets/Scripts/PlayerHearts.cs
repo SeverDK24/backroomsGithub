@@ -12,7 +12,7 @@ public class PlayerHearts : MonoBehaviour
 
     public float timer = 2;
     public int lives = 3;                // серця
-    float cooldown = 0f;          // таймер паузи
+    float cooldown = 2f;          // таймер паузи
     void Start()
     {
 
@@ -21,12 +21,13 @@ public class PlayerHearts : MonoBehaviour
 
     void Update()
     {
-
+        
+        EnemyDamage();
     }
 
     public void EnemyDamage()
     {
-        if (cooldown > 0)
+        if (cooldown >= 0)
             cooldown -= Time.deltaTime;
 
         Vector3 center = transform.position + CubPosition;
@@ -44,23 +45,31 @@ public class PlayerHearts : MonoBehaviour
     }
     public void LoseHearts()
     {
-        if (lives == 3)
+        lives -= 1;
+        //if (lives == 3)
+        //{
+        //    heart3.SetActive(false);
+        //}
+        if (lives == 2)
         {
             heart3.SetActive(false);
         }
-        if (lives == 2)
-        {
-            heart2.SetActive(false);
-        }
         if (lives == 1)
         {
-            heart1.SetActive(false);
-            Debug.Log("PlayerDied");
+            heart2.SetActive(false);
+
         }
 
 
-        lives--;
-        if (lives < 0) lives = 0;
+        
+        if (lives <= 0)
+        {
+            lives = 0;
+            heart2.SetActive(false);
+            Debug.Log("PlayerDied");
+            
+        }
+           
     }
 
     private void OnDrawGizmos()
