@@ -21,7 +21,7 @@ public class PlayerHearts : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(cooldown);
+        
         EnemyDamage();
     }
 

@@ -124,7 +124,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2123064692097715188, guid: 6cd2652d0e03eac4d9f956d904f1f582, type: 3}
   m_PrefabInstance: {fileID: 1301325728}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1775493992}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bfdc3aadbfe44d48be54316ba15d00e, type: 3}
@@ -805,7 +805,7 @@ GameObject:
   - component: {fileID: 1017233500}
   m_Layer: 0
   m_Name: player(test)
-  m_TagString: player
+  m_TagString: test
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -897,7 +897,7 @@ Transform:
   m_GameObject: {fileID: 1017233499}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.78, y: 0.53, z: -3.86}
+  m_LocalPosition: {x: -26.03, y: 0.53, z: -3.86}
   m_LocalScale: {x: 0.3024819, y: 0.85151, z: 0.39910272}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1111,7 +1111,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7181828697669541453, guid: 6cd2652d0e03eac4d9f956d904f1f582, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 1775494002}
   m_SourcePrefab: {fileID: 100100000, guid: 6cd2652d0e03eac4d9f956d904f1f582, type: 3}
 --- !u!4 &1301325729 stripped
 Transform:
@@ -1263,6 +1266,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1775493992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7181828697669541453, guid: 6cd2652d0e03eac4d9f956d904f1f582, type: 3}
+  m_PrefabInstance: {fileID: 1301325728}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1775494002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775493992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f53f6e7d18ea0449661e37d718aeeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FindItemsPlayer
+  distance: 10
 --- !u!1 &1956519036
 GameObject:
   m_ObjectHideFlags: 0
