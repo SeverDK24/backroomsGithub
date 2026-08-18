@@ -18,6 +18,10 @@ public class FindItemsPlayer : MonoBehaviour
             {
                 Debug.Log("contact");
             }
+            if (hit.collider.gameObject.tag == "door")
+            {
+                Debug.Log("open");
+            }
 
         }
         Debug.DrawRay(transform.position, transform.forward * distance, Color.yellow);

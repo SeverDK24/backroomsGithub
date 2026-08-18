@@ -9,6 +9,7 @@ TagManager:
   - point
   - monster
   - test
+  - door
   layers:
   - Default
   - TransparentFX
