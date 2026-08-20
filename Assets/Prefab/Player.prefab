@@ -1649,6 +1649,7 @@ GameObject:
   - component: {fileID: 2123064692097715188}
   - component: {fileID: 6170785535660506134}
   - component: {fileID: 4544811777651916351}
+  - component: {fileID: 5210110783845106986}
   - component: {fileID: 7544960913458600157}
   - component: {fileID: 7551896280950633712}
   m_Layer: 0
@@ -1842,6 +1843,19 @@ MonoBehaviour:
   textSound: {fileID: 2994416648248946435}
   musicslider: {fileID: 1018619760886686404}
   areSettingsOpen: 0
+--- !u!114 &5210110783845106986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7181828697669541453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f53f6e7d18ea0449661e37d718aeeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FindItemsPlayer
+  distance: 10
 --- !u!54 &7544960913458600157
 Rigidbody:
   m_ObjectHideFlags: 0
