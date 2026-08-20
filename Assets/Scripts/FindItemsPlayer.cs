@@ -4,6 +4,7 @@ using UnityEngine;
 public class FindItemsPlayer : MonoBehaviour
 {
    public float distance = 10f;
+    public Animator anm;
     void Start()
     {
         
@@ -18,6 +19,14 @@ public class FindItemsPlayer : MonoBehaviour
           if (hit.collider.gameObject.tag == "test")
             {
                 Debug.Log("contact");
+            }
+            if (hit.collider.gameObject.tag == "door")
+            {
+                Debug.Log("door detected");
+                if (Input.GetKey(KeyCode.E))
+                {
+                    anm.SetTrigger("open");
+                }
             }
 
         }
