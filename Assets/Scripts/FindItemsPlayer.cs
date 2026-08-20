@@ -5,6 +5,8 @@ public class FindItemsPlayer : MonoBehaviour
 {
    public float distance = 10f;
     public Animator anm;
+    public Animator anm1;
+    private bool iskey = false; 
     void Start()
     {
         
@@ -25,9 +27,28 @@ public class FindItemsPlayer : MonoBehaviour
                 Debug.Log("door detected");
                 if (Input.GetKey(KeyCode.E))
                 {
-                    anm.SetTrigger("open");
+                    if (hit.collider.gameObject.name == "Door")
+                    {
+                        anm.SetTrigger("open");
+                    }
+
+                    if (hit.collider.gameObject.name == "Door1")
+                    {
+                        Debug.Log("key needed");
+                        if (iskey)
+                        {
+                            anm1.SetTrigger("open");    
+                        }
+                    }
+
                 }
             }
+            if (hit.collider.gameObject.tag == "key")
+            {
+                Debug.Log("натисніть ліву кнопку миші щоб підібрати");
+                iskey = true;   
+            }
+
 
         }
         Debug.DrawRay(transform.position, transform.forward * distance, Color.yellow);

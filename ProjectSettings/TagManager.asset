@@ -10,6 +10,7 @@ TagManager:
   - monster
   - test
   - door
+  - key
   layers:
   - Default
   - TransparentFX
