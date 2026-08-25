@@ -5,6 +5,7 @@ public class OpenWalls : MonoBehaviour
     public GameObject wall;
     public GameObject wall1;
     public GameObject wall2;
+    public AudioSource WallsSound;
 
     void Start()
     {
@@ -19,12 +20,11 @@ public class OpenWalls : MonoBehaviour
 
     public void Open()
     {
-        Debug.Log(wall);
-        Debug.Log(wall1);
-        Debug.Log(wall2);
-
+        
         wall.SetActive(false);
         wall1.SetActive(false);
         wall2.SetActive(false);
+
+        WallsSound.Play();
     }
 }

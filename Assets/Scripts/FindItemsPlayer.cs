@@ -7,7 +7,9 @@ public class FindItemsPlayer : MonoBehaviour
     public Animator anm;
     public Animator anm1;
     private bool iskey = false;
+
     public OpenWalls openWalls;//силка на мій скрпит 
+   
     void Start()
     {
 
@@ -58,6 +60,7 @@ public class FindItemsPlayer : MonoBehaviour
                     Debug.Log("Було нажато");
                     hit.collider.GetComponentInParent<Animator>().SetTrigger("Press lever");
                     openWalls.Open();
+                   
                 }
             }
 
