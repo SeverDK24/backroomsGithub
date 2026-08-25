@@ -3,22 +3,22 @@ using UnityEngine;
 
 public class FindItemsPlayer : MonoBehaviour
 {
-   public float distance = 10f;
+    public float distance = 10f;
     public Animator anm;
     public Animator anm1;
-    private bool iskey = false; 
+    private bool iskey = false;
     void Start()
     {
-        
+
     }
 
-    
+
     void Update()
     {
-        RaycastHit hit; 
-        if (Physics.Raycast(transform.position, transform.forward, out hit,distance))
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, distance))
         {
-          if (hit.collider.gameObject.tag == "test")
+            if (hit.collider.gameObject.tag == "test")
             {
                 Debug.Log("contact");
             }
@@ -37,7 +37,7 @@ public class FindItemsPlayer : MonoBehaviour
                         Debug.Log("key needed");
                         if (iskey)
                         {
-                            anm1.SetTrigger("open");    
+                            anm1.SetTrigger("open");
                         }
                     }
 
@@ -46,16 +46,10 @@ public class FindItemsPlayer : MonoBehaviour
             if (hit.collider.gameObject.tag == "key")
             {
                 Debug.Log("натисніть ліву кнопку миші щоб підібрати");
-                iskey = true;   
+                iskey = true;
             }
 
-
-        }
-        Debug.DrawRay(transform.position, transform.forward * distance, Color.yellow);
-
         //Для ричага
-        if (Physics.Raycast(transform.position, transform.forward, out hit, distance))
-        {
             if (hit.collider.CompareTag("lever"))
             {
                 if (Input.GetKeyDown(KeyCode.E))
@@ -64,8 +58,12 @@ public class FindItemsPlayer : MonoBehaviour
                     hit.collider.GetComponentInParent<Animator>().SetTrigger("Press lever");
                 }
             }
+
         }
+        Debug.DrawRay(transform.position, transform.forward * distance, Color.yellow);
+
         
+
     }
     private void OnDrawGizmos()
     {
