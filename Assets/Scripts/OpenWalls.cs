@@ -6,6 +6,7 @@ public class OpenWalls : MonoBehaviour
     public GameObject wall1;
     public GameObject wall2;
     public AudioSource WallsSound;
+    public bool leverdown = false;
 
     void Start()
     {
@@ -25,6 +26,10 @@ public class OpenWalls : MonoBehaviour
         wall1.SetActive(false);
         wall2.SetActive(false);
 
-        WallsSound.Play();
+        if (leverdown == false)
+        {
+            WallsSound.Play();
+            leverdown = true;
+        }
     }
 }

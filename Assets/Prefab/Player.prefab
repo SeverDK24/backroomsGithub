@@ -843,7 +843,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 726cb332b9eb8a841b0ab94ba3abc670, type: 3}
+  m_Resource: {fileID: 8300000, guid: d49c253538049b345b9572167273540c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.97
   m_Pitch: 1
@@ -1310,11 +1310,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 42
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 4
-    m_MaxSize: 40
+    m_MaxSize: 42
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1856,6 +1856,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FindItemsPlayer
   distance: 10
+  anm: {fileID: 0}
+  anm1: {fileID: 0}
+  openWalls: {fileID: 0}
 --- !u!54 &7544960913458600157
 Rigidbody:
   m_ObjectHideFlags: 0
