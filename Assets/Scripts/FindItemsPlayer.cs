@@ -29,15 +29,24 @@ public class FindItemsPlayer : MonoBehaviour
                 {
                     if (hit.collider.gameObject.name == "Door")
                     {
+                        
                         anm.SetTrigger("open");
                     }
 
-                    if (hit.collider.gameObject.name == "Door1")
+                    if (hit.collider.gameObject.tag == "Door1")
                     {
                         Debug.Log("key needed");
-                        if (iskey)
+                        if (Input.GetKeyDown(KeyCode.E) && iskey) 
                         {
                             anm1.SetTrigger("open");    
+                        }
+                    }
+                    if (hit.collider.gameObject.tag == "lever")
+                    {
+                        if (Input.GetKeyDown(KeyCode.E))
+                        {
+                            Debug.Log("Було нажато");
+                            hit.collider.GetComponentInParent<Animator>().SetTrigger("Press lever");
                         }
                     }
 
@@ -46,24 +55,15 @@ public class FindItemsPlayer : MonoBehaviour
             if (hit.collider.gameObject.tag == "key")
             {
                 Debug.Log("натисніть ліву кнопку миші щоб підібрати");
-                iskey = true;   
-            }
-
-
-        }
-        Debug.DrawRay(transform.position, transform.forward * distance, Color.yellow);
-
-        //Для ричага
-        if (Physics.Raycast(transform.position, transform.forward, out hit, distance))
-        {
-            if (hit.collider.CompareTag("lever"))
-            {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetMouseButtonDown(0))
                 {
-                    Debug.Log("Було нажато");
-                    hit.collider.GetComponentInParent<Animator>().SetTrigger("Press lever");
+                    iskey = true;
+                    Debug.Log(iskey);
                 }
+               
             }
+
+
         }
         
     }
