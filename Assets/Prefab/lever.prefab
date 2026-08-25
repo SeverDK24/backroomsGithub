@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5221053097662994785}
   m_Layer: 0
   m_Name: lever (1)
-  m_TagString: Untagged
+  m_TagString: lever
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 2219464199644943095}
   m_Layer: 0
   m_Name: lever (2)
-  m_TagString: Untagged
+  m_TagString: lever
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 7872555385020244700}
   m_Layer: 0
   m_Name: lever (3)
-  m_TagString: Untagged
+  m_TagString: lever
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 7920687213096148398}
   m_Layer: 0
   m_Name: Cylinder (1)
-  m_TagString: Untagged
+  m_TagString: lever
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 7314606586703684854}
   m_Layer: 0
   m_Name: lever
-  m_TagString: Untagged
+  m_TagString: lever
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -576,7 +576,7 @@ GameObject:
   - component: {fileID: 370903680679132058}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: lever
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -684,6 +684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 234838406555143705}
   - component: {fileID: 2526600710930039111}
+  - component: {fileID: 5588849846919948548}
   m_Layer: 0
   m_Name: lever
   m_TagString: Untagged
@@ -735,6 +736,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5588849846919948548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8895337150946355046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f56423446bd2ac141b9df032d01a0b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OpenWalls
+  wall: {fileID: 0}
+  wall1: {fileID: 0}
+  wall2: {fileID: 0}
 --- !u!1 &9219430191880643764
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,7 +765,7 @@ GameObject:
   - component: {fileID: 6663190337166670885}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: lever
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

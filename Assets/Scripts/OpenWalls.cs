@@ -2,15 +2,29 @@ using UnityEngine;
 
 public class OpenWalls : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject wall;
+    public GameObject wall1;
+    public GameObject wall2;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
+    }
+
+    public void Open()
+    {
+        Debug.Log(wall);
+        Debug.Log(wall1);
+        Debug.Log(wall2);
+
+        wall.SetActive(false);
+        wall1.SetActive(false);
+        wall2.SetActive(false);
     }
 }
