@@ -3,22 +3,22 @@ using UnityEngine;
 
 public class FindItemsPlayer : MonoBehaviour
 {
-   public float distance = 10f;
+    public float distance = 10f;
     public Animator anm;
     public Animator anm1;
-    private bool iskey = false; 
+    private bool iskey = false;
     void Start()
     {
-        
+
     }
 
-    
+
     void Update()
     {
-        RaycastHit hit; 
-        if (Physics.Raycast(transform.position, transform.forward, out hit,distance))
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, distance))
         {
-          if (hit.collider.gameObject.tag == "test")
+            if (hit.collider.gameObject.tag == "test")
             {
                 Debug.Log("contact");
             }
@@ -29,24 +29,15 @@ public class FindItemsPlayer : MonoBehaviour
                 {
                     if (hit.collider.gameObject.name == "Door")
                     {
-                        
                         anm.SetTrigger("open");
                     }
 
-                    if (hit.collider.gameObject.tag == "Door1")
+                    if (hit.collider.gameObject.name == "Door1")
                     {
                         Debug.Log("key needed");
-                        if (Input.GetKeyDown(KeyCode.E) && iskey) 
+                        if (iskey)
                         {
-                            anm1.SetTrigger("open");    
-                        }
-                    }
-                    if (hit.collider.gameObject.tag == "lever")
-                    {
-                        if (Input.GetKeyDown(KeyCode.E))
-                        {
-                            Debug.Log("Було нажато");
-                            hit.collider.GetComponentInParent<Animator>().SetTrigger("Press lever");
+                            anm1.SetTrigger("open");
                         }
                     }
 
@@ -55,17 +46,24 @@ public class FindItemsPlayer : MonoBehaviour
             if (hit.collider.gameObject.tag == "key")
             {
                 Debug.Log("натисніть ліву кнопку миші щоб підібрати");
-                if (Input.GetMouseButtonDown(0))
-                {
-                    iskey = true;
-                    Debug.Log(iskey);
-                }
-               
+                iskey = true;
             }
 
+        //Для ричага
+            if (hit.collider.CompareTag("lever"))
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Debug.Log("Було нажато");
+                    hit.collider.GetComponentInParent<Animator>().SetTrigger("Press lever");
+                }
+            }
 
         }
+        Debug.DrawRay(transform.position, transform.forward * distance, Color.yellow);
+
         
+
     }
     private void OnDrawGizmos()
     {
