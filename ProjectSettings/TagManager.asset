@@ -11,6 +11,7 @@ TagManager:
   - test
   - door
   - key
+  - Door1
   layers:
   - Default
   - TransparentFX
