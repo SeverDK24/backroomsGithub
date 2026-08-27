@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FindItemsPlayer : MonoBehaviour
@@ -6,7 +7,11 @@ public class FindItemsPlayer : MonoBehaviour
     public float distance = 10f;
     public Animator anm;
     public Animator anm1;
+    public Animator anm2;
     private bool iskey = false;
+    private bool iskey2 = false;
+    public GameObject key1;
+    public GameObject key2;
 
     public OpenWalls openWalls;//силка на мій скрпит 
    
@@ -25,9 +30,25 @@ public class FindItemsPlayer : MonoBehaviour
             {
                 Debug.Log("contact");
             }
+            if (hit.collider.gameObject.tag == "Door1")
+            {
+                Debug.Log("key needed");
+                if (Input.GetKey(KeyCode.E) && iskey)
+                {
+                    anm1.SetTrigger("open");
+                }
+            }
+            if (hit.collider.gameObject.tag == "Door2")
+            {
+                Debug.Log("key needed");
+                if (Input.GetKey(KeyCode.E) && iskey2)
+                {
+                    anm2.SetTrigger("open");
+                }
+            }
             if (hit.collider.gameObject.tag == "door")
             {
-                Debug.Log("door detected");
+               
                 if (Input.GetKey(KeyCode.E))
                 {
                     if (hit.collider.gameObject.name == "Door")
@@ -35,25 +56,41 @@ public class FindItemsPlayer : MonoBehaviour
                         anm.SetTrigger("open");
                     }
 
-                    if (hit.collider.gameObject.name == "Door1")
-                    {
-                        Debug.Log("key needed");
-                        if (iskey)
-                        {
-                            anm1.SetTrigger("open");
-                        }
-                    }
+                    
 
                 }
+                
             }
-            if (hit.collider.gameObject.tag == "key")
+            if (hit.collider.gameObject.tag == "key") 
             {
-                Debug.Log("натисніть ліву кнопку миші щоб підібрати");
-                iskey = true;
+                if (Input.GetMouseButtonDown(0))
+                {
+
+                    Debug.Log("натисніть ліву кнопку миші щоб підібрати");
+                    iskey = true;
+                    key1.SetActive(false);
+                }
+
+
+
+
+
+
+
+            }
+            if (hit.collider.gameObject.tag == "key2")
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+
+                    Debug.Log("натисніть ліву кнопку миші щоб підібрати");
+                    iskey2 = true;
+                    key2.SetActive(false);
+                }
             }
 
-        //Для ричага
-            if (hit.collider.CompareTag("lever"))
+                //Для ричага
+                if (hit.collider.CompareTag("lever"))
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {

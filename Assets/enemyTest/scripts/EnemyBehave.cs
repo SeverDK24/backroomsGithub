@@ -6,28 +6,32 @@ public class EnemyBehave : MonoBehaviour
     public Transform playerpos;
     public Animator anim;
     public EnemyMeshAgent ma;
+    protected bool isspotted = false;   
     void Start()
     {
         
     }
 
-    
+
     void Update()
     {
-        transform.LookAt(playerpos);
+      
+
         Collider[] hits = Physics.OverlapSphere(transform.position, rad);
-            foreach (Collider hit in hits)
+        foreach (Collider hit in hits)
         {
             if (hit.gameObject.tag == "player")
             {
+                isspotted = true;
                 Debug.Log("player spotted");
                 ma.SetPosition();
+
+            }
+
+            if (hit.gameObject.tag == null)
+            {
                 
             }
-            //if (hits == null)
-            //{
-            //    anim.SetTrigger("islost");
-            //}
         }
 
 
