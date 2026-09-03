@@ -15,6 +15,9 @@ TagManager:
   - lever
   - Door2
   - key2
+  - hammer
+  - plank
+  - plank1
   layers:
   - Default
   - TransparentFX
