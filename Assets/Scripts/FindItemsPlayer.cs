@@ -10,11 +10,12 @@ public class FindItemsPlayer : MonoBehaviour
     public Animator anm2;
     private bool iskey = false;
     private bool iskey2 = false;
+    private bool isham = false;
     public GameObject key1;
     public GameObject key2;
-
+    public GameObject hamm;
     public OpenWalls openWalls;//силка на мій скрпит 
-   
+    public GameObject[] planks;
     void Start()
     {
 
@@ -88,9 +89,47 @@ public class FindItemsPlayer : MonoBehaviour
                     key2.SetActive(false);
                 }
             }
+            if (hit.collider.gameObject.tag == "hammer")
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
 
-                //Для ричага
-                if (hit.collider.CompareTag("lever"))
+                    Debug.Log("натисніть ліву кнопку миші щоб підібрати");
+                    isham = true;
+                    hamm.SetActive(false);
+                }
+            }
+            if (hit.collider.gameObject.tag == "plank")
+            {
+                if (isham)
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        planks[1].SetActive(false);
+                        planks[2].SetActive(false);
+                        planks[3].SetActive(false);
+                        planks[0].SetActive(false);
+                    }
+
+                }
+            }
+            if (hit.collider.gameObject.tag == "plank1")
+            {
+                if (isham)
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        planks[4].SetActive(false);
+                        planks[5].SetActive(false);
+                        planks[6].SetActive(false);
+                        planks[7].SetActive(false);
+                    }
+
+                }
+            }
+
+            //Для ричага
+            if (hit.collider.CompareTag("lever"))
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
