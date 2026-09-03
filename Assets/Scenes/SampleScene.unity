@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &111770727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1543387501674533233, guid: 6cd2652d0e03eac4d9f956d904f1f582, type: 3}
+  m_PrefabInstance: {fileID: 1067283358}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,6 +308,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5110009879213114789, guid: 6cd2652d0e03eac4d9f956d904f1f582, type: 3}
+      propertyPath: sounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -5110009879213114789, guid: 6cd2652d0e03eac4d9f956d904f1f582, type: 3}
+      propertyPath: 'sounds.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 77018de0738ee4b4e935925bfa28eb6e, type: 3}
     - target: {fileID: -491284547687510535, guid: 6cd2652d0e03eac4d9f956d904f1f582, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -347,6 +360,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5139486971874772569, guid: 6cd2652d0e03eac4d9f956d904f1f582, type: 3}
+      propertyPath: screamersPhotos.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5139486971874772569, guid: 6cd2652d0e03eac4d9f956d904f1f582, type: 3}
+      propertyPath: 'screamersPhotos.Array.data[4]'
+      value: 
+      objectReference: {fileID: 111770727}
     - target: {fileID: 5210110783845106986, guid: 6cd2652d0e03eac4d9f956d904f1f582, type: 3}
       propertyPath: m_Enabled
       value: 0
