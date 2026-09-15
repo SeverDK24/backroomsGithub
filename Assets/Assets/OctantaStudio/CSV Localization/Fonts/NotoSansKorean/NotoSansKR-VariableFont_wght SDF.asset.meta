@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 62fad90cbceed7045a7781a88378f47e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 347544
+  packageName: Tooltip Localization System mini
+  packageVersion: 1.0
+  assetPath: Assets/OctantaStudio/CSV Localization/Fonts/NotoSansKorean/NotoSansKR-VariableFont_wght
+    SDF.asset
+  uploadId: 964382

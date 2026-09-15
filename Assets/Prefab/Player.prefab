@@ -869,7 +869,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 39
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2198,7 +2198,9 @@ MonoBehaviour:
   anm2: {fileID: 0}
   key1: {fileID: 0}
   key2: {fileID: 0}
+  hamm: {fileID: 0}
   openWalls: {fileID: 0}
+  planks: []
 --- !u!114 &-5110009879213114789
 MonoBehaviour:
   m_ObjectHideFlags: 0

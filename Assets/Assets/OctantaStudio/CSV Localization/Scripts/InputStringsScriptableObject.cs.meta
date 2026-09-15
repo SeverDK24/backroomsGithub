@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e897935d451a8c7449217dd77197624d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: 0d26cff72b9a978479c6b82e3541e7be, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 347544
+  packageName: Tooltip Localization System mini
+  packageVersion: 1.0
+  assetPath: Assets/OctantaStudio/CSV Localization/Scripts/InputStringsScriptableObject.cs
+  uploadId: 964382

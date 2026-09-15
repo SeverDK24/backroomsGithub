@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d6754f0f070ccb24b875c4fa7bef1a58
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 347544
+  packageName: Tooltip Localization System mini
+  packageVersion: 1.0
+  assetPath: Assets/OctantaStudio/CSV Localization/InputData.asset
+  uploadId: 964382

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bb6a682dfd18d344984a9f79b7e14394
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 347544
+  packageName: Tooltip Localization System mini
+  packageVersion: 1.0
+  assetPath: Assets/OctantaStudio/CSV Localization/Fonts/NotoSansChinese/NotoSansTC-VariableFont_wght
+    SDF.asset
+  uploadId: 964382

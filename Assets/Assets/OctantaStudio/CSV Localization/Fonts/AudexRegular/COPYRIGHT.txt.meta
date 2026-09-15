@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b1fc81e845deb4244825d7c30b9975f5
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 347544
+  packageName: Tooltip Localization System mini
+  packageVersion: 1.0
+  assetPath: Assets/OctantaStudio/CSV Localization/Fonts/AudexRegular/COPYRIGHT.txt
+  uploadId: 964382

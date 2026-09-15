@@ -18,6 +18,11 @@ TagManager:
   - hammer
   - plank
   - plank1
+  - Text1
+  - Text2
+  - Buton
+  - Photo
+  - Buton2
   layers:
   - Default
   - TransparentFX

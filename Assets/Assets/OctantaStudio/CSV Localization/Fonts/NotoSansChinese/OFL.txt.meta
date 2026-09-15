@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b53bbdd5d43c1da488830b756db84070
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 347544
+  packageName: Tooltip Localization System mini
+  packageVersion: 1.0
+  assetPath: Assets/OctantaStudio/CSV Localization/Fonts/NotoSansChinese/OFL.txt
+  uploadId: 964382

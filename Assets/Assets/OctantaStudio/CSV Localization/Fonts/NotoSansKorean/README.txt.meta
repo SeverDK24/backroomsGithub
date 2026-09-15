@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 938780875f561c24f8a4cce5ad692e79
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 347544
+  packageName: Tooltip Localization System mini
+  packageVersion: 1.0
+  assetPath: Assets/OctantaStudio/CSV Localization/Fonts/NotoSansKorean/README.txt
+  uploadId: 964382

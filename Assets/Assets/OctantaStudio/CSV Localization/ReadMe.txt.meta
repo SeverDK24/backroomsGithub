@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 331a3099867eee5449a1f7106ca9ba09
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 347544
+  packageName: Tooltip Localization System mini
+  packageVersion: 1.0
+  assetPath: Assets/OctantaStudio/CSV Localization/ReadMe.txt
+  uploadId: 964382
