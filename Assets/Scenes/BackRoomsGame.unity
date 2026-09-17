@@ -906,6 +906,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1130250347344860735, guid: ca10c2bdd5981fa40ac127e883197da5, type: 3}
+      propertyPath: m_TagString
+      value: monster
+      objectReference: {fileID: 0}
     - target: {fileID: 1638825698872740556, guid: ca10c2bdd5981fa40ac127e883197da5, type: 3}
       propertyPath: plh
       value: 
@@ -4729,7 +4733,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 20250695609166017, guid: 6cd2652d0e03eac4d9f956d904f1f582, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1380382966272140227, guid: 6cd2652d0e03eac4d9f956d904f1f582, type: 3}
       propertyPath: m_LocalScale.y
