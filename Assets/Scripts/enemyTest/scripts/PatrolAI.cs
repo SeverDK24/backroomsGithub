@@ -15,7 +15,7 @@ public class PatrolAI : MonoBehaviour
     public float detectionRadius = 10f;
     public PlayerHearts plh;
     private bool chasingPlayer = false;
-    
+    public Animator animator;   
    
 
     private void Start()
