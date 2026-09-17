@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Skrimer : MonoBehaviour
 {
@@ -38,7 +39,12 @@ public class Skrimer : MonoBehaviour
             if (screamerTimer >= 0.23f)
             {
                 currentScreamer.SetActive(false);
-                currentScreamer = null;
+                Transform t = currentScreamer.transform;
+                while (t != null)
+                {
+                    Debug.Log(t.name + " — activeSelf: " + t.gameObject.activeSelf);
+                    t = t.parent;
+                }
             }
         }
     }

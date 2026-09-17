@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHearts : MonoBehaviour
 {
@@ -59,19 +60,23 @@ public class PlayerHearts : MonoBehaviour
             heart2.SetActive(false);
 
         }
-
-
         
+     
         if (lives <= 0)
         {
             lives = 0;
             heart2.SetActive(false);
             Debug.Log("PlayerDied");
+            ChangeScene(2);
             
         }
            
     }
 
+    public void ChangeScene(int sceneNumber)
+    {
+        SceneManager.LoadScene(sceneNumber);
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = new Color(1f, 0f, 0f, 0.3f);
