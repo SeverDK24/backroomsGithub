@@ -62,6 +62,21 @@ public class FindItemsPlayer : MonoBehaviour
                 }
                 
             }
+            if (hit.collider.gameObject.tag == "final")
+            {
+
+                if (Input.GetKey(KeyCode.E))
+                {
+                    if (hit.collider.gameObject.name == "final")
+                    {
+                        anm.SetTrigger("open");
+                    }
+
+
+
+                }
+
+            }
             if (hit.collider.gameObject.tag == "key") 
             {
                 if (Input.GetMouseButtonDown(0))

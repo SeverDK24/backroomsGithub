@@ -23,6 +23,8 @@ TagManager:
   - Buton
   - Photo
   - Buton2
+  - final
+  - FinTrig
   layers:
   - Default
   - TransparentFX
