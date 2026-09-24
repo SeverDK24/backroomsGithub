@@ -1,6 +1,7 @@
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FindItemsPlayer : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class FindItemsPlayer : MonoBehaviour
     public Animator anm;
     public Animator anm1;
     public Animator anm2;
+    public Animator anmf;
     private bool iskey = false;
     private bool iskey2 = false;
     private bool isham = false;
@@ -61,6 +63,21 @@ public class FindItemsPlayer : MonoBehaviour
 
                 }
                 
+            }
+            if (hit.collider.gameObject.tag == "final")
+            {
+
+                if (Input.GetKey(KeyCode.E))
+                {
+                    if (hit.collider.gameObject.name == "final")
+                    {
+                        anmf.SetTrigger("open");
+                    }
+
+
+
+                }
+
             }
             if (hit.collider.gameObject.tag == "key") 
             {
@@ -145,6 +162,13 @@ public class FindItemsPlayer : MonoBehaviour
 
         
 
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "FinTrig")
+        {
+            
+        }
     }
     private void OnDrawGizmos()
     {
