@@ -66,10 +66,10 @@ public class FindItemsPlayer : MonoBehaviour
             }
             if (hit.collider.gameObject.tag == "final")
             {
-
+                Debug.Log("final");
                 if (Input.GetKey(KeyCode.E))
                 {
-                    if (hit.collider.gameObject.name == "final")
+                    if (hit.collider.gameObject.tag == "final")
                     {
                         anmf.SetTrigger("open");
                     }

@@ -72,7 +72,13 @@ public class PlayerHearts : MonoBehaviour
         }
            
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "FinTrig")
+        {
+            ChangeScene(2);
+        }
+    }
     public void ChangeScene(int sceneNumber)
     {
         SceneManager.LoadScene(sceneNumber);
