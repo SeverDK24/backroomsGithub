@@ -14,6 +14,7 @@ public class PlayerHearts : MonoBehaviour
     public float timer = 2;
     public int lives = 3;                // серця
     float cooldown = 2f;          // таймер паузи
+    public FindItemsPlayer fp;
     void Start()
     {
 
@@ -22,7 +23,16 @@ public class PlayerHearts : MonoBehaviour
 
     void Update()
     {
-        
+        Debug.Log(lives);
+        if (fp.ismed == true)
+        {
+            lives += 1;
+            fp.ismed = !fp.ismed;  
+            if (lives >= 3)
+            {
+                lives = 3;
+            }
+        }
         EnemyDamage();
     }
 

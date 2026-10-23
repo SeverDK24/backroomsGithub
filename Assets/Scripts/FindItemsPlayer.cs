@@ -13,6 +13,7 @@ public class FindItemsPlayer : MonoBehaviour
     private bool iskey = false;
     private bool iskey2 = false;
     private bool isham = false;
+    public bool ismed = false;
     public GameObject key1;
     public GameObject key2;
     public GameObject hamm;
@@ -144,6 +145,19 @@ public class FindItemsPlayer : MonoBehaviour
 
                 }
             }
+            if (hit.collider.gameObject.tag == "med")
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    hit.collider.gameObject.SetActive(false);
+                    Debug.Log("натисніть ліву кнопку миші щоб підібрати");
+                    ismed = true;
+
+
+                }
+
+
+            }
 
             //Для ричага
             if (hit.collider.CompareTag("lever"))
@@ -153,9 +167,11 @@ public class FindItemsPlayer : MonoBehaviour
                     Debug.Log("Було нажато");
                     hit.collider.GetComponentInParent<Animator>().SetTrigger("Press lever");
                     openWalls.Open();
-                   
+                    
                 }
             }
+            
+
 
         }
         Debug.DrawRay(transform.position, transform.forward * distance, Color.yellow);

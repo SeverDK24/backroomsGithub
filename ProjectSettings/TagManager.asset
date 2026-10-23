@@ -25,6 +25,7 @@ TagManager:
   - Buton2
   - final
   - FinTrig
+  - med
   layers:
   - Default
   - TransparentFX
