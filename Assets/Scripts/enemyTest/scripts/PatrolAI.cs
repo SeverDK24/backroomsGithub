@@ -15,7 +15,8 @@ public class PatrolAI : MonoBehaviour
     public float detectionRadius = 10f;
     public PlayerHearts plh;
     private bool chasingPlayer = false;
-    public Animator animator;   
+    public Animator animator;
+    public FindItemsPlayer fp;
    
 
     private void Start()
@@ -98,6 +99,13 @@ public class PatrolAI : MonoBehaviour
         }
 
         if (!playerFound && chasingPlayer)
+        {
+            chasingPlayer = false;
+            player = null;
+
+            GoToRandomPoint();
+        }
+        if (fp.issafe)
         {
             chasingPlayer = false;
             player = null;

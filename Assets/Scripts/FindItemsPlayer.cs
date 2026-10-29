@@ -14,6 +14,7 @@ public class FindItemsPlayer : MonoBehaviour
     private bool iskey2 = false;
     private bool isham = false;
     public bool ismed = false;
+    public bool issafe = false;
     public GameObject key1;
     public GameObject key2;
     public GameObject hamm;
@@ -27,6 +28,7 @@ public class FindItemsPlayer : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(issafe);
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, distance))
         {
@@ -185,7 +187,16 @@ public class FindItemsPlayer : MonoBehaviour
         {
             
         }
+        if (other.gameObject.tag == "locker")
+        {
+            issafe = true;  
+        }
+        if (other.gameObject.tag != "locker")
+        {
+            issafe = true;
+        }
     }
+    
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;

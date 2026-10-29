@@ -26,6 +26,7 @@ TagManager:
   - final
   - FinTrig
   - med
+  - locker
   layers:
   - Default
   - TransparentFX
