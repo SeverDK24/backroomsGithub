@@ -10,6 +10,7 @@ public class FindItemsPlayer : MonoBehaviour
     public Animator anm1;
     public Animator anm2;
     public Animator anmf;
+    public Animator lockanm;
     private bool iskey = false;
     private bool iskey2 = false;
     private bool isham = false;
@@ -66,6 +67,20 @@ public class FindItemsPlayer : MonoBehaviour
 
                 }
                 
+            }
+            if (hit.collider.gameObject.tag == "locker")
+            {
+
+                if (Input.GetKey(KeyCode.E))
+                {
+                   
+                        lockanm.SetTrigger("lock");
+                    
+
+
+
+                }
+
             }
             if (hit.collider.gameObject.tag == "final")
             {

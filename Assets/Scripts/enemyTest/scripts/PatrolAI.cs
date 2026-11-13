@@ -1,5 +1,7 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class PatrolAI : MonoBehaviour
@@ -17,7 +19,7 @@ public class PatrolAI : MonoBehaviour
     private bool chasingPlayer = false;
     public Animator animator;
     public FindItemsPlayer fp;
-   
+    public float distance = 10f;
 
     private void Start()
     {
@@ -91,10 +93,29 @@ public class PatrolAI : MonoBehaviour
         {
             if (obj.CompareTag("player"))
             {
-                player = obj.transform;
-                playerFound = true;
-                chasingPlayer = true;
-                break;
+                
+                //RaycastHit hit;
+                //if (Physics.Raycast(transform.position, transform.forward, out hit, distance))
+                //{
+                   // transform.LookAt(hit.transform.position);
+                   // if (hit.collider.gameObject.tag == "player")
+                   // {
+                        player = obj.transform;
+                        playerFound = true;
+                        chasingPlayer = true;
+                        break;
+                   // }
+                  //  if (hit.collider.gameObject.tag != "player")
+                  //  {
+                        GoToRandomPoint();
+                   // }
+
+               // }
+              
+
+
+
+
             }
         }
 
