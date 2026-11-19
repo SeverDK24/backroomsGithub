@@ -29,7 +29,8 @@ public class FindItemsPlayer : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(issafe);
+        
+        Debug.Log("issafe: " + issafe);
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, distance))
         {
@@ -202,16 +203,21 @@ public class FindItemsPlayer : MonoBehaviour
         {
             
         }
-        if (other.gameObject.tag == "locker")
+        if (other.gameObject.tag == "safe")
         {
             issafe = true;  
         }
-        if (other.gameObject.tag != "locker")
+
+
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "safe")
         {
-            issafe = true;
+            issafe = false;
         }
     }
-    
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;

@@ -91,31 +91,22 @@ public class PatrolAI : MonoBehaviour
 
         foreach (Collider obj in objects)
         {
-            if (obj.CompareTag("player"))
+            if (obj.CompareTag("player") && fp.issafe == false)
             {
-                
-                //RaycastHit hit;
-                //if (Physics.Raycast(transform.position, transform.forward, out hit, distance))
-                //{
-                   // transform.LookAt(hit.transform.position);
-                   // if (hit.collider.gameObject.tag == "player")
-                   // {
+               
                         player = obj.transform;
                         playerFound = true;
                         chasingPlayer = true;
-                        break;
-                   // }
-                  //  if (hit.collider.gameObject.tag != "player")
-                  //  {
-                        GoToRandomPoint();
-                   // }
-
-               // }
+                  
               
 
 
 
 
+            }
+            if (obj.CompareTag("player") && fp.issafe == false)
+            {
+                GoToRandomPoint();
             }
         }
 
